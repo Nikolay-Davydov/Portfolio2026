@@ -13,7 +13,7 @@ const projects: Project[] = [
     title: "Project One",
     shortDescription: "A demo frontend project built with Next.js",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    image: "/images/project1.png",
+    image: "/images/placeholder-1.svg",
     link: "",
   },
   {
@@ -21,7 +21,7 @@ const projects: Project[] = [
     title: "Project Two",
     shortDescription: "API service example",
     techStack: ["Node.js", "Express"],
-    image: "/images/project2.png",
+    image: "/images/placeholder-2.svg",
     link: "",
   },
   {
@@ -29,7 +29,7 @@ const projects: Project[] = [
     title: "Project Three",
     shortDescription: "Data engineering sample",
     techStack: ["Python", "Airflow"],
-    image: "/images/project3.png",
+    image: "/images/avatar.svg",
     link: "",
   },
 ];
