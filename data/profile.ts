@@ -4,9 +4,9 @@ const profile = {
   summary: "Frontend developer specializing in React and Next.js.",
   skills: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
   links: {
-    email: "ivan@example.com",
-    github: "https://github.com/ivan",
-    linkedin: "https://linkedin.com/in/ivan",
+    email: "davidovns70@gmail.com",
+    github: "https://github.com/Nikolay-Davydov",
+    linkedin: "https://www.linkedin.com/in/nikolai-davydov87",
   },
 };
 
