@@ -1,5 +1,7 @@
 .nav {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,9 +58,11 @@
 
 .linkActive {
   color: var(--royal);
-  font-weight: 700;
+  font-weight: 600;
+  background: rgba(26, 43, 109, 0.08);
+  border-radius: 13px;
   border-bottom: 2px solid var(--royal);
-  padding-bottom: 2px;
+  padding-bottom: 1px;
 }
 
 .navRight {

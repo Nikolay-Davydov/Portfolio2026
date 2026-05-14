@@ -1,19 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
-  const pathname = usePathname() || "/";
+  const [activeSection, setActiveSection] = useState("home");
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" },
-    { href: "/resume", label: "Resume" },
-    { href: "/contact", label: "Contact" },
+    { href: "#home", label: "Home", id: "home" },
+    { href: "#about", label: "About", id: "about" },
+    { href: "#projects", label: "Projects", id: "projects" },
+    { href: "#resume", label: "Resume", id: "resume" },
+    { href: "#contact", label: "Contact", id: "contact" },
   ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+            history.replaceState(null, "", `#${entry.target.id}`);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+
+    navItems.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+
 
   return (
     <nav className={styles.nav}>
@@ -23,25 +46,18 @@ export default function Navbar() {
 
       <div className={styles.navLinksWrap}>
         <ul className={styles.navLinks}>
-          {navItems.map((item) => {
-            const active =
-              pathname === item.href ||
-              (item.href !== "/" && pathname.startsWith(item.href));
-            return (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`${styles.link} ${active ? styles.linkActive : ""}`}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            );
-          })}
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className={`${styles.link} ${activeSection === item.id ? styles.linkActive : ""}`}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
-
-      {/* language switching removed — English only */}
     </nav>
   );
 }

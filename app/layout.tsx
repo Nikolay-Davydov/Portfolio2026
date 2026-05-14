@@ -14,10 +14,10 @@ export const metadata = buildMetadata({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <Navbar />
-        <main className="">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
