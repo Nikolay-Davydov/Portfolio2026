@@ -1,10 +1,26 @@
 import profile from "../data/profile";
+import styles from "./page.module.css";
 
 export default function Home() {
+  const [first, ...rest] = profile.name.split(" ");
+  const last = rest.join(" ");
+
   return (
-    <section className="py-12 text-center">
-      <h2 className="text-3xl font-bold">Hi, I&apos;m {profile.name}</h2>
-      <p className="mt-4 text-gray-600 dark:text-gray-300">{profile.summary}</p>
+    <section className={styles.hero}>
+      <div className={styles.heroLeft}>
+        <div className={styles.heroEyebrow}>
+          <div className={styles.heroEyebrowLine} />
+          <span className={styles.heroEyebrowText}>{profile.role}</span>
+        </div>
+
+        <h1 className={styles.heroName}>
+          {first}
+          <br />
+          <span className={styles.heroNameItalic}>{last}</span>
+        </h1>
+
+        <p className={styles.heroRole}>{profile.summary}</p>
+      </div>
     </section>
   );
 }

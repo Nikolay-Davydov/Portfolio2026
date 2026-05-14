@@ -1,7 +1,6 @@
 import "./globals.css";
 import { ReactNode } from "react";
-import LocaleProvider from "../components/LocaleProvider";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { buildMetadata } from "../lib/seo";
 import profile from "../data/profile";
@@ -17,11 +16,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <LocaleProvider>
-          <Header />
-          <main className="container mx-auto p-6">{children}</main>
-          <Footer />
-        </LocaleProvider>
+        <Navbar />
+        <main className="">{children}</main>
+        <Footer />
       </body>
     </html>
   );

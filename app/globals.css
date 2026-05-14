@@ -11,6 +11,8 @@ body,
 body {
   background-color: #ffffff;
   color: #111827;
+  overflow: hidden;
+  height: 100%;
 }
 
 .dark body {

@@ -1,7 +1,7 @@
 const profile = {
   name: "Nikolay Davydov",
   role: "Frontend Developer",
-  summary: "Frontend developer specializing in React and Next.js.",
+  summary: "Here you'll find everything about my experience, projects, and background.",
   skills: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
   links: {
     email: "davidovns70@gmail.com",
