@@ -16,6 +16,8 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
+    const sectionIds = ["home", "about", "projects", "resume", "contact"];
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,7 +30,7 @@ export default function Navbar() {
       { rootMargin: "-40% 0px -55% 0px" }
     );
 
-    navItems.forEach(({ id }) => {
+    sectionIds.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
