@@ -1,5 +1,7 @@
 import profile from "../data/profile";
 import styles from "./page.module.css";
+import projects from "../data/projects";
+import ProjectCard from "../components/ProjectCard";
 
 export default function Home() {
   const [first, ...rest] = profile.name.split(" ");
@@ -23,7 +25,7 @@ export default function Home() {
       </section>
 
       <section id="about" className="container mx-auto p-6">
-        <h2 className="text-2xl font-bold">{profile.name}</h2>
+        <h2 className="sectionTitle">About</h2>
         <p className="mt-2 text-sm text-gray-600">{profile.role}</p>
         <p className="mt-4 text-gray-700">{profile.summary}</p>
         <h3 className="mt-6 font-semibold">Skills</h3>
@@ -35,15 +37,20 @@ export default function Home() {
       </section>
 
       <section id="projects" className="container mx-auto p-6">
-        <h2 className="text-2xl font-bold">Projects</h2>
+        <h2 className="sectionTitle">Projects</h2>
+        <div className="mt-8">
+          {projects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
       </section>
 
       <section id="resume" className="container mx-auto p-6">
-        <h2 className="text-2xl font-bold">Resume</h2>
+        <h2 className="sectionTitle">Resume</h2>
       </section>
 
       <section id="contact" className="container mx-auto p-6">
-        <h2 className="text-2xl font-bold">Contact</h2>
+        <h2 className="sectionTitle">Contact</h2>
         <div className="mt-6 flex flex-col gap-4">
           {profile.links.email && (
             

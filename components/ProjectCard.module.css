@@ -1,0 +1,100 @@
+.card {
+  display: flex;
+  gap: 48px;
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+  background: var(--bg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 32px rgba(26, 43, 109, 0.1);
+  border-color: blue;
+  border-radius: 15px;
+}
+
+.imageWrap {
+  width: 260px;
+  height: 160px;
+  flex-shrink: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: flex-start;
+  padding-top: 8px;
+}
+
+.title {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--royal);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.description {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  max-width: 520px;
+  margin: 0;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech {
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--royal-mid);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 10px;
+  background: var(--surface);
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+  margin-top: 4px;
+}
+
+.link {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--royal);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--royal-mid);
+  text-decoration: underline;
+}
