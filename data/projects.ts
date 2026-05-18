@@ -5,32 +5,35 @@ export type Project = {
   techStack: string[];
   image?: string;
   link?: string;
+  github?: string;
 };
 
 const projects: Project[] = [
   {
-    slug: "project-1",
-    title: "Project One",
-    shortDescription: "A demo frontend project built with Next.js",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    slug: "guider-pro",
+    title: "Guider.Pro",
+    shortDescription: "Web catalog of places and companies in Costa Rica for locals and tourists. Commercial project with web app and PWA. Worked on frontend development as part of a distributed team.",
+    techStack: ["Next.js", "TypeScript", "React", "PWA"],
     image: "/images/placeholder-1.svg",
-    link: "",
+    link: "https://www.linkedin.com/company/guider-pro/",
   },
   {
-    slug: "project-2",
-    title: "Project Two",
-    shortDescription: "API service example",
-    techStack: ["Node.js", "Express"],
+    slug: "adaptive-layout",
+    title: "Adaptive Blog Layout",
+    shortDescription: "Diploma project: adaptive and mobile web page layout built from PSD mockups. Supports desktop and tablet breakpoints with flexbox grid.",
+    techStack: ["HTML", "CSS", "Flexbox", "Responsive Design"],
     image: "/images/placeholder-2.svg",
-    link: "",
+    link: "https://nikolay-davydov.github.io/ahj-my_blog/",
+    github: "https://github.com/Nikolay-Davydov/ahj-my_blog",
   },
   {
-    slug: "project-3",
-    title: "Project Three",
-    shortDescription: "Data engineering sample",
-    techStack: ["Python", "Airflow"],
+    slug: "card-validation",
+    title: "Card Validation",
+    shortDescription: "Frontend form with real-time bank card number validation using the Luhn algorithm.",
+    techStack: ["JavaScript", "HTML", "CSS"],
     image: "/images/avatar.svg",
-    link: "",
+    link: "https://nikolay-davydov.github.io/ahj-code-4.1-hw/",
+    github: "https://github.com/Nikolay-Davydov/ahj-code-4.1-hw",
   },
 ];
 
