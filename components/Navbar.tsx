@@ -11,12 +11,11 @@ export default function Navbar() {
     { href: "#home", label: "Home", id: "home" },
     { href: "#about", label: "About", id: "about" },
     { href: "#projects", label: "Projects", id: "projects" },
-    { href: "#resume", label: "Resume", id: "resume" },
     { href: "#contact", label: "Contact", id: "contact" },
   ];
 
   useEffect(() => {
-    const sectionIds = ["home", "about", "projects", "resume", "contact"];
+    const sectionIds = ["home", "about", "projects", "contact"];
 
     const observer = new IntersectionObserver(
       (entries) => {

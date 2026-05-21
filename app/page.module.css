@@ -1,8 +1,8 @@
 .hero {
-  padding: 64px 64px 64px;
+  padding: 120px 64px;
   display: flex;
   position: relative;
-  min-height: calc(100vh - 80px - 57px);
+  /* min-height: calc(100vh - 80px - 57px); */
   /* overflow: hidden; */
 }
 
