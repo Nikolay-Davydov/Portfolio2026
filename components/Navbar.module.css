@@ -99,3 +99,108 @@
   background: var(--royal);
   color: #fff;
 }
+
+/* Бургер кнопка */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+}
+
+.burgerLine {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--royal);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Анимация в крестик */
+.burgerLineTop {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burgerLineMid {
+  opacity: 0;
+}
+
+.burgerLineBot {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Мобильное меню */
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 24px;
+  left: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 0;
+  z-index: 100;
+  min-width: 160px;
+  box-shadow: 0 8px 24px rgba(26, 43, 109, 0.1);
+}
+
+.mobileLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileLink {
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 10px 24px;
+  display: block;
+  transition: color 0.2s;
+  text-align: center;
+}
+
+.mobileLink:hover {
+  color: var(--royal);
+}
+
+/* Медиа запросы */
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 24px;
+  }
+
+  .navLinksWrap {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+    /* Активный пункт в мобильном меню */
+  .mobileLink.linkActive {
+    background: rgba(26, 43, 109, 0.08);
+    border-radius: 6px;
+    margin: 0 13px;
+    padding: 10px 12px;
+    border-bottom: none;
+    color: var(--royal);
+    font-weight: 700;
+  }
+}
