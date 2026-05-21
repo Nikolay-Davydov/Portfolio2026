@@ -41,7 +41,6 @@
   margin-bottom: 32px;
 }
 
-
 .heroEyebrowText {
   font-size: 10px;
   letter-spacing: 0.26em;
@@ -62,7 +61,7 @@
 .heroNameItalic {
   font-style: italic;
   color: var(--royal-mid);
-  padding: 64px
+  padding: 64px;
 }
 
 .heroRole {
@@ -76,4 +75,18 @@
 .heroRole strong {
   color: var(--royal);
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 24px;
+  }
+
+  .heroName {
+    font-size: 52px;
+  }
+
+  .heroNameItalic {
+    padding: 0;
+  }
 }

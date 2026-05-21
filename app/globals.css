@@ -64,3 +64,41 @@ section[id] {
   height: 1px;
   background: var(--royal-mid);
 }
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.twoColAbout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.projectsList {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .twoColAbout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+    .projectsList {
+    padding: 0 8px;
+  }
+}

@@ -25,18 +25,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="container mx-auto px-16 py-16">
+      <section id="about" className="container mx-auto px-6 py-12 md:px-16 md:py-16">
         <h2 className="sectionTitle">About</h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr",
-            gap: "64px",
-            alignItems: "center",
-            maxWidth: "960px",
-            margin: "0 auto",
-          }}
+        <div className="twoColAbout"
         >
           {/* Левая колонка — текст */}
           <div
@@ -54,6 +46,7 @@ export default function Home() {
                 lineHeight: "2",
                 letterSpacing: "0.02em",
                 marginBottom: "20px",
+                paddingRight: "24px",
               }}
             >
               I&apos;m a Frontend Developer with an engineering background and a
@@ -70,6 +63,7 @@ export default function Home() {
                 color: "var(--muted)",
                 lineHeight: "2",
                 letterSpacing: "0.02em",
+                paddingRight: "24px",
               }}
             >
               I built this portfolio to showcase my skills and experience with
@@ -98,6 +92,7 @@ export default function Home() {
                 display: "grid",
                 gridTemplateColumns: "repeat(3, 1fr)",
                 gap: "12px",
+                padding: "0 24px",
               }}
             >
               {profile.skills.map((skill) => {
@@ -141,25 +136,17 @@ export default function Home() {
 
       <section id="projects" className="container mx-auto p-6">
         <h2 className="sectionTitle">Projects</h2>
-        <div className="mt-8">
+        <div className="mt-8 projectsList">
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
       </section>
 
-      <section id="contact" className="container mx-auto px-16 py-16">
+      <section id="contact" className="container mx-auto px-6 py-12 md:px-16 md:py-16">
         <h2 className="sectionTitle">Contact</h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "64px",
-            maxWidth: "960px",
-            margin: "0 auto",
-          }}
-        >
+        <div className="twoCol">
           {/* Левая — Education */}
           <div>
             <p
